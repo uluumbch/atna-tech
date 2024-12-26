@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="absolute z-1 w-full" id="particle"></div>
+            <div class="absolute z-1 w-full h-screen" id="particle"></div>
         </div>
 
 

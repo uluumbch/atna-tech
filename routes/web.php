@@ -4,7 +4,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('landing');
-});
+})->name('home');
+
+Route::get('/consulting', function () {
+    return view('consulting');
+})->name('consulting');
 
 Route::get('/s', function () {
     $httpClient = new \GuzzleHttp\Client();

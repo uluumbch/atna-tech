@@ -2,7 +2,7 @@
 class="flex items-center justify-between bg-primary-400 fixed z-20 w-full top-0 px-6 py-4 "
 aria-label="atna tech menu">
 <!-- Brand Logo -->
-<a href="#" class="">
+<a href="{{ route('home') }}" class="">
 
     <svg class="w-32" width="242" height="40" viewBox="0 0 242 40" fill="none"
         xmlns="http://www.w3.org/2000/svg">
@@ -78,12 +78,12 @@ aria-label="atna tech menu">
 <!-- Desktop Menu -->
 <ul class="hidden items-center gap-4 md:flex">
     <li>
-        <a href="#"
+        <a href="{{ route('consulting') }}"
             class="font-medium text-white underline-offset-2 hover:text-slate-300 focus:outline-none focus:underline"
             aria-current="page">Pendirian badan usaha</a>
     </li>
     <li>
-        <a href="#"
+        <a href="{{ route('consulting') }}"
             class="font-medium text-white underline-offset-2 hover:text-slate-300 focus:outline-none focus:underline">Perizinan
             badan Usaha
         </a>
@@ -121,12 +121,12 @@ aria-label="atna tech menu">
     x-transition:leave-start="translate-y-0" x-transition:leave-end="-translate-y-full" id="mobileMenu"
     class="fixed max-h-svh overflow-y-auto inset-x-0 top-0 z-10 flex flex-col divide-y divide-slate-300 rounded-b-xl border-b border-slate-300 bg-slate-100 px-6 pb-6 pt-20  md:hidden">
             <li>
-                <a href="#"
+                <a href="{{ route('consulting') }}"
                     class="w-full text-lg font-bold text-primary-700 focus:underline py-6 underline"
                     aria-current="page">Pendirian badan usaha</a>
             </li>
             <li>
-                <a href="#"
+                <a href="{{ route('consulting') }}"
                     class="w-full text-lg font-bold text-primary-700 focus:underline py-6">Perizinan
                     badan Usaha
                 </a>
