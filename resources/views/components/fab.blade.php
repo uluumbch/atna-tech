@@ -1,5 +1,12 @@
 <div class="fixed z-50 bottom-4 right-4" x-data="{ open: false }">
-        <div x-show="open" x-anchor.top-end.offset.20="$refs.button">
+        <div x-show="open" x-anchor.top-end.offset.20="$refs.button" x-cloak
+        x-transition:enter="transition ease-out duration-200"
+        x-transition:enter-start="opacity-0 scale-95"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="transition ease-in duration-75"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-95"
+        >
             <div class="absolute bottom-20 right-0 w-96 bg-white rounded-lg shadow-lg transition-all duration-500">
 
                 <div class="flex justify-between items-center bg-[#25d366] px-2 py-3 rounded-t-lg">

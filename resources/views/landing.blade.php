@@ -529,4 +529,66 @@
             </div>
         </div>
         {{-- END MAPS --}}
+
+        @push('scripts')
+        <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+        <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                $('.slider-carousel').slick({
+                    slidesToShow: 1,
+                    lazyLoad: 'ondemand',
+                    slidesToScroll: 1,
+                    autoplay: true,
+                    autoplaySpeed: 1500,
+                    arrows: true,
+                    // dots: true,
+                });
+    
+                particlesJS.load("particle", "{{ asset('particles.json') }}", function() {
+                    // console.log("callback - particles.js config loaded");
+                });
+    
+                var grid = document.querySelector('#masonry-grid');
+    
+                var msnry = new Masonry(grid, {
+                    itemSelector: '.grid-item',
+                    columnWidth: '.grid-sizer',
+                    percentPosition: true
+                });
+    
+                imagesLoaded(grid).on('progress', function() {
+                    // layout Masonry after each image loads
+                    msnry.layout();
+                });
+    
+                const featuresElements = document.querySelectorAll('.features');
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        const element = entry.target;
+    
+                        if (entry.isIntersecting) {
+                            // Add animation with a slight delay
+                            setTimeout(() => {
+                                element.classList.add('animate__swing');
+                            }, 200); // Adjust the delay as needed
+                        } else {
+                            // Remove the animation class when out of view to reset it
+                            element.classList.remove('animate__swing');
+                        }
+                    });
+                }, {
+                    threshold: 0.5 // Trigger when 50% of the element is in the viewport (adjustable)
+                });
+    
+                // Observe each .features element individually
+                featuresElements.forEach(element => {
+                    observer.observe(element);
+                });
+    
+    
+            });
+        </script>
+        @endpush
     @endsection
