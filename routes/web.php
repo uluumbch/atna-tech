@@ -10,6 +10,10 @@ Route::get('/consulting', function () {
     return view('consulting');
 })->name('consulting');
 
+Route::get('/a', function () {
+    return view('a');
+})->name('a');
+
 Route::get('/s', function () {
     $httpClient = new \GuzzleHttp\Client();
     $response = $httpClient->get('https://www.google.com/maps/place/Atna+Tech/@-6.2138556,106.8304643,19z/data=!4m8!3m7!1s0x2e69f5005697bd6f:0x1ec34cb7f61cb4d6!8m2!3d-6.2138569!4d106.831108!9m1!1b1!16s%2Fg%2F11wnjc6p1p?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D');

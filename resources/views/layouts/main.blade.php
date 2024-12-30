@@ -18,8 +18,11 @@
     <!-- Styles / Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <style>
-        [x-cloak] { display: none !important; }
+        [x-cloak] {
+            display: none !important;
+        }
     </style>
+    @stack('styles')
 
     {{-- animate css --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -30,14 +33,13 @@
     {{-- slick --}}
     @vite(['resources/css/slick.css', 'resources/css/slick-theme.css'])
 
-    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
 
 </head>
 
 <body class="font-sans antialiased">
-   <x-navbar />
+    <x-navbar />
 
     <main id="hero" class="bg-transparent">
         @yield('content')
@@ -111,7 +113,7 @@
     {{-- end footer --}}
 
     {{-- floatng button --}}
-<x-fab />
+    <x-fab />
     {{-- end FAB --}}
 
     @stack('scripts')

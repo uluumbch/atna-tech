@@ -14,7 +14,8 @@
 				"ryannaddy.laravel-artisan",
 				"onecentlin.laravel5-snippets",
 				"onecentlin.laravel-blade",
-				"bradlc.vscode-tailwindcss"
+				"bradlc.vscode-tailwindcss",
+				"shufo.vscode-blade-formatter"
 			],
 			"settings": {}
 		}
