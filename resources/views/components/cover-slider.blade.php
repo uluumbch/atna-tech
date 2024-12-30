@@ -15,7 +15,7 @@
         [
             'title' => 'Atna IT',
             'desc' => 'Solusi Teknologi Terpercaya untuk Kemajuan Bisnis Anda',
-            'url' => '#',
+            'url' => route('it'),
             'img' => asset('images/pexels-lkloeppel-466685.jpg'),
         ],
     ];
