@@ -23,7 +23,8 @@
                 IT
             </a>
         </li>
-        <li><a href="#tentang-kami" x-on:click.prevent="$scrollTo({ offsetHeader: true })"
+        <li><a href="{{ route('home') }}#tentang-kami"
+                @if (Route::currentRouteName() == 'home') x-on:click.prevent="$scrollTo({ offsetHeader: true })" @endif
                 class="font-medium text-black underline-offset-2 hover:text-slate-800 focus:outline-none focus:underline">Tentang
                 kami
             </a>

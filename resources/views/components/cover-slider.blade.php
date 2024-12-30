@@ -2,13 +2,13 @@
     $data = [
         [
             'title' => 'Atna Consulting',
-            'url' => '#',
+            'url' => route('consulting'),
             'desc' => 'Solusi Terbaik Untuk Perizinan dan Pendirian Badan Usaha',
             'img' => asset('images/pexels-lkloeppel-466685.jpg'),
         ],
         [
             'title' => 'Atna Office',
-            'url' => '#',
+            'url' => route('office'),
             'desc' => 'Inovasi Produk Pilihan Untuk Melengkapi Kebutuhan Kantor Anda',
             'img' => asset('images/pexels-nietjuh-934062.jpg'),
         ],

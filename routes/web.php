@@ -10,9 +10,9 @@ Route::get('/consulting', function () {
     return view('consulting');
 })->name('consulting');
 
-Route::get('/a', function () {
-    return view('a');
-})->name('a');
+Route::get('/office', function () {
+    return view('office');
+})->name('office');
 
 Route::get('/s', function () {
     $httpClient = new \GuzzleHttp\Client();

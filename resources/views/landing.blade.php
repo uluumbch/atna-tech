@@ -2,56 +2,6 @@
 
 @section('title', 'Home')
 @section('content')
-    {{-- <div class="min-h-screen pt-20 ">
-        @php
-            $data = [
-                [
-                    'title' => 'Atna Consulting',
-                    'url' => '#',
-                    'desc' => 'Solusi Terbaik Untuk Perizinan dan Pendirian Badan Usaha',
-                    'img' => asset('images/pexels-lkloeppel-466685.jpg'),
-                ],
-                [
-                    'title' => 'Atna Office',
-                    'url' => '#',
-                    'desc' => 'Inovasi Produk Pilihan Untuk Melengkapi Kebutuhan Kantor Anda',
-                    'img' => asset('images/pexels-lkloeppel-466685.jpg'),
-                ],
-                [
-                    'title' => 'Atna IT',
-                    'desc' => 'Solusi Teknologi Terpercaya untuk Kemajuan Bisnis Anda',
-                    'url' => '#',
-                    'img' => asset('images/pexels-lkloeppel-466685.jpg'),
-                ],
-            ];
-        @endphp
-        <div class="slider-hero">
-            @foreach ($data as $item)
-                <div class="h-full px-4">
-                    <div class="grid lg:grid-cols-2 gap-8 h-full items-center">
-                        <!-- Left Content -->
-                        <div class="space-y-6">
-                            <h1 class="text-4xl lg:text-6xl font-bold">{{ $item['title'] }}</h1>
-                            <p class="text-xl lg:text-2xl">{{ $item['desc'] }}</p>
-                            <a href="{{ $item['url'] }}"
-                                class="inline-flex items-center px-6 py-3 text-base font-medium text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300">
-                                Pelajari Lebih Lanjut
-                                <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                                </svg>
-                            </a>
-                        </div>
-                        <!-- Right Image -->
-                        <div class="hidden lg:block">
-                            <img src="{{ $item['img'] }}" alt="{{ $item['title'] }}"
-                                class="w-full h-auto rounded-lg shadow-xl">
-                        </div>
-                    </div>
-                </div>
-            @endforeach
-        </div>
-    </div> --}}
 
     <x-cover-slider />
 
