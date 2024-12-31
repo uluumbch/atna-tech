@@ -369,7 +369,7 @@
             Cek Ketersediaan Nama Perusahaan Anda
         </h1>
         <a href="https://ahu.go.id/sabh/perseroan/pesannama" target="_blank"
-            class="inline-flex items-center bg-primary-500 text-slate-100 px-4 py-2 rounded-lg m-5">
+            class="flex justify-center mx-auto max-w-xs bg-primary-500 text-slate-100 px-4 py-2 rounded-lg m-5">
             Cek Nama Perusahaan Anda
         </a>
     </section>
@@ -379,7 +379,7 @@
             Cek Kode KBLI Yang Anda Butuhkan Disini
         </h1>
         <a href="https://oss.go.id/informasi/kbli-berbasis-risiko" target="_blank"
-        class="inline-flex items-center bg-primary-500 text-slate-100 px-4 py-2 rounded-lg m-5">
+        class="flex justify-center  mx-auto max-w-xs bg-primary-500 text-slate-100 px-4 py-2 rounded-lg m-5">
         Cek Kode KBLI
     </a>
     </section>
