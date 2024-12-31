@@ -596,7 +596,7 @@
                     prevArrow: '.hero-slider__button--prev',
                     nextArrow: '.hero-slider__button--next',
                     autoplay: true,
-                    autoplaySpeed: 1000,
+                    autoplaySpeed: 3000,
                 })
 
                 var grid = document.querySelector('#masonry-grid');
