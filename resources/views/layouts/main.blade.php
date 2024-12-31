@@ -146,6 +146,18 @@
         </script>
     @endsession
 
+    @session('errors')
+        <script>
+            $(document).ready(function() {
+                toast('Error!', {
+                    type: 'danger',
+                    description: {!! json_encode(session('errors')->first()) !!},
+                    position: 'top-right'
+                });
+            });
+        </script>
+    @endsession
+
     @session('info')
         <script>
             $(document).ready(function() {

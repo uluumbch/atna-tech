@@ -95,77 +95,17 @@
                     *Mulai Dari Rp 6.500.000
                 </p>
             </div>
-            {{-- MODAL paket pendirian PT --}}
-            <div id="paket-pt-modal" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-md max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                            <h3 class="text-xl font-semibold text-gray-900 ">
-                                Daftarkan Perusahaan Anda Sekarang
-                            </h3>
-                            <button type="button"
-                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
-                                data-modal-hide="paket-pt-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                                    viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-4 md:p-5">
-                            <form class="space-y-4" action="#">
-                                <div>
-                                    <label for="Paket"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" readonly
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
-                                    <input type="text" name="nama" id="nama_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
-                                        Telepon</label>
-                                    <input type="text" name="nomor_telepon_pt" id="nomor_telepon_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="No. Telepon Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
-                                        Perusahaan</label>
-                                    <input type="text" name="nama_perusahaan" id="nama_perusahaan"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Perusahaan Anda" required />
-                                </div>
-                                <button type="submit"
-                                    class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-                                    Dapatkan Penawaran
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {{-- pricing paket pendirian PT --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
                 <x-price-card title="Business Starter" :original-price="6800000" :discount-price="6500000" :features="$PT"
-                    :included-features-count="10" button-text="Pilih Paket" modal-target="paket-pma-modal" />
+                    :included-features-count="10" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan" data-nama-paket="Paket Pendirian PT" />
 
                 <x-price-card title="Business Standard" :original-price="8600000" :discount-price="8550000" :features="$PT"
-                    :included-features-count="14" button-text="Pilih Paket" modal-target="paket-pma-modal" />
+                    :included-features-count="14" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan" data-nama-paket="Paket Pendirian PT" />
 
                 <x-price-card title="Business Complete" :original-price="10200000" :discount-price="9528000" :features="$PT"
-                    :included-features-count="19" button-text="Pilih Paket" modal-target="paket-pma-modal" />
+                    :included-features-count="19" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan" data-nama-paket="Paket Pendirian PT" />
             </div>
 
         </div>
@@ -205,78 +145,20 @@
                     *Mulai Dari Rp 12.500.000
                 </p>
             </div>
-            {{-- MODAL paket pendirian PMA --}}
-            <div id="paket-pma-modal" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-md max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                            <h3 class="text-xl font-semibold text-gray-900 ">
-                                Daftarkan Perusahaan Anda Sekarang
-                            </h3>
-                            <button type="button"
-                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
-                                data-modal-hide="paket-pma-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-4 md:p-5">
-                            <form class="space-y-4" action="#">
-                                <div>
-                                    <label for="Paket"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" id="nama_paket" readonly
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
-                                </div>
-                                <div>
-                                    <label for="nama"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
-                                    <input type="text" name="nama" id="nama_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
-                                        Telepon</label>
-                                    <input type="text" name="nomor_telepon_pt" id="nomor_telepon_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="No. Telepon Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
-                                        Perusahaan</label>
-                                    <input type="text" name="nama_perusahaan" id="nama_perusahaan"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Perusahaan Anda" required />
-                                </div>
-                                <button type="submit"
-                                    class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-                                    Dapatkan Penawaran
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {{-- pricing paket pendirian PT --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
                 <x-price-card title="Business Starter" :original-price="13500000" :discount-price="12500000" :features="$PT"
-                    :included-features-count="10" button-text="Pilih Paket" modal-target="paket-pma-modal" />
+                    :included-features-count="10" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan"
+                    data-nama-paket="Pendirian PMA" />
 
                 <x-price-card title="Business Standard" :original-price="15500000" :discount-price="14500000" :features="$PT"
-                    :included-features-count="14" button-text="Pilih Paket" modal-target="paket-pma-modal" />
+                    :included-features-count="14" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan"
+                    data-nama-paket="Pendirian PMA" />
 
                 <x-price-card title="Business Complete" :original-price="17500000" :discount-price="16000000" :features="$PT"
-                    :included-features-count="19" button-text="Pilih Paket" modal-target="paket-pma-modal" />
+                    :included-features-count="19" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan"
+                    data-nama-paket="Pendirian PMA" />
             </div>
 
         </div>
@@ -316,78 +198,18 @@
                     *Mulai Dari Rp 2.000.000
                 </p>
             </div>
-            {{-- MODAL paket pendirian PMA --}}
-            <div id="paket-perorangan-modal" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-md max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                            <h3 class="text-xl font-semibold text-gray-900 ">
-                                Daftarkan Perusahaan Anda Sekarang
-                            </h3>
-                            <button type="button"
-                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
-                                data-modal-hide="paket-pma-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-4 md:p-5">
-                            <form class="space-y-4" action="#">
-                                <div>
-                                    <label for="Paket"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" id="nama_paket" readonly
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
-                                </div>
-                                <div>
-                                    <label for="nama"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
-                                    <input type="text" name="nama" id="nama_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
-                                        Telepon</label>
-                                    <input type="text" name="nomor_telepon_pt" id="nomor_telepon_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="No. Telepon Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
-                                        Perusahaan</label>
-                                    <input type="text" name="nama_perusahaan" id="nama_perusahaan"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Perusahaan Anda" required />
-                                </div>
-                                <button type="submit"
-                                    class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-                                    Dapatkan Penawaran
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             {{-- pricing paket pendirian PT --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
                 <x-price-card title="Business Starter" :original-price="2500000" :discount-price="2000000" :features="$PT"
-                    :included-features-count="12" button-text="Pilih Paket" modal-target="paket-perorangan-modal" />
+                    :included-features-count="12" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan" data-nama-paket="Paket Pendirian PT Perorangan" />
 
                 <x-price-card title="Business Standard" :original-price="3500000" :discount-price="3250000" :features="$PT"
-                    :included-features-count="14" button-text="Pilih Paket" modal-target="paket-perorangan-modal" />
+                    :included-features-count="14" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan" data-nama-paket="Paket Pendirian PT Perorangan" />
 
                 <x-price-card title="Business Complete" :original-price="4800000" :discount-price="4500000" :features="$PT"
-                    :included-features-count="19" button-text="Pilih Paket" modal-target="paket-perorangan-modal" />
+                    :included-features-count="19" button-text="Pilih Paket" modal-target="modal-paket" data-custom="perusahaan" data-nama-paket="Paket Pendirian PT Perorangan" />
             </div>
 
         </div>
@@ -450,81 +272,21 @@
                     *Mulai Dari Rp 2.000.000
                 </p>
             </div> --}}
-            {{-- MODAL paket pendirian PMA --}}
-            <div id="paket-perorangan-modal" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-md max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                            <h3 class="text-xl font-semibold text-gray-900 ">
-                                Daftarkan Perusahaan Anda Sekarang
-                            </h3>
-                            <button type="button"
-                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
-                                data-modal-hide="paket-pma-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-4 md:p-5">
-                            <form class="space-y-4" action="#">
-                                <div>
-                                    <label for="Paket"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" id="nama_paket" readonly
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
-                                </div>
-                                <div>
-                                    <label for="nama"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
-                                    <input type="text" name="nama" id="nama_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
-                                        Telepon</label>
-                                    <input type="text" name="nomor_telepon_pt" id="nomor_telepon_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="No. Telepon Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
-                                        Perusahaan</label>
-                                    <input type="text" name="nama_perusahaan" id="nama_perusahaan"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Perusahaan Anda" required />
-                                </div>
-                                <button type="submit"
-                                    class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-                                    Dapatkan Penawaran
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             {{-- pricing paket pendirian PT --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
                 <x-price-card id="yayasan" title="Paket Pendirian Yayasan" :original-price="5000000" :discount-price="5000000"
-                    :features="$yayasan" :included-features-count="count($yayasan)" button-text="Pilih Paket"
-                    modal-target="paket-perorangan-modal" />
+                    :features="$yayasan" :included-features-count="count($yayasan)" button-text="Pilih Paket" modal-target="modal-paket"
+                    data-custom="yayasan" data-nama-paket="Paket Pendirian Yayasan" />
 
                 <x-price-card id="koperasi" title="Paket Pendirian Koperasi" :original-price="8000000" :discount-price="8000000"
-                    :features="$koperasi" :included-features-count="count($koperasi)" button-text="Pilih Paket"
-                    modal-target="paket-perorangan-modal" />
+                    :features="$koperasi" :included-features-count="count($koperasi)" button-text="Pilih Paket" modal-target="modal-paket"
+                    data-custom="koperasi"  data-nama-paket="Paket Pendirian Koperasi"/>
 
                 <x-price-card id="perkumpulan" title="Paket Pendirian Perkumpulan" :original-price="8000000" :discount-price="8000000"
-                    :features="$perkumpulan" :included-features-count="count($perkumpulan)" button-text="Pilih Paket"
-                    modal-target="paket-perorangan-modal" />
+                    :features="$perkumpulan" :included-features-count="count($perkumpulan)" button-text="Pilih Paket" modal-target="modal-paket"
+                    data-custom="perkumpulan"  data-nama-paket="Paket Pendirian Perkumpulan"/>
             </div>
 
         </div>
@@ -557,75 +319,16 @@
                 </p>
             </div>
             {{-- MODAL paket pendirian cv --}}
-            <div id="paket-cv-modal" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-md max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                            <h3 class="text-xl font-semibold text-gray-900 ">
-                                Daftarkan Perusahaan Anda Sekarang
-                            </h3>
-                            <button type="button"
-                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
-                                data-modal-hide="paket-pma-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-4 md:p-5">
-                            <form class="space-y-4" action="#">
-                                <div>
-                                    <label for="Paket"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" id="nama_paket" readonly
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
-                                </div>
-                                <div>
-                                    <label for="nama"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
-                                    <input type="text" name="nama" id="nama_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
-                                        Telepon</label>
-                                    <input type="text" name="nomor_telepon_pt" id="nomor_telepon_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="No. Telepon Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
-                                        Perusahaan</label>
-                                    <input type="text" name="nama_perusahaan" id="nama_perusahaan"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Perusahaan Anda" required />
-                                </div>
-                                <button type="submit"
-                                    class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-                                    Dapatkan Penawaran
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             {{-- pricing paket pendirian cv --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
                 <x-price-card title="Business Starter" :original-price="4500000" :discount-price="3900000" :features="$cv"
-                    :included-features-count="count($cv) - 3" button-text="Pilih Paket" modal-target="paket-cv-modal" />
+                    :included-features-count="count($cv) - 3" button-text="Pilih Paket" modal-target="modal-paket" data-nama-paket="Paket Pendirian CV" />
                 <x-price-card title="Business Standard" :original-price="5000000" :discount-price="4500000" :features="$cv"
-                    :included-features-count="count($cv) - 1" button-text="Pilih Paket" modal-target="paket-cv-modal" />
+                    :included-features-count="count($cv) - 1" button-text="Pilih Paket" modal-target="modal-paket" data-nama-paket="Paket Pendirian CV" />
                 <x-price-card title="Business Complete" :original-price="6800000" :discount-price="6400000" :features="$cv"
-                    :included-features-count="count($cv)" button-text="Pilih Paket" modal-target="paket-cv-modal" />
+                    :included-features-count="count($cv)" button-text="Pilih Paket" modal-target="modal-paket" data-nama-paket="Paket Pendirian CV" />
 
             </div>
 
@@ -662,79 +365,95 @@
                     Paket Pendirian Firma
                 </p>
             </div>
-            {{-- MODAL paket pendirian firma --}}
-            <div id="paket-firma-modal" tabindex="-1" aria-hidden="true"
-                class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-                <div class="relative p-4 w-full max-w-md max-h-full">
-                    <!-- Modal content -->
-                    <div class="relative bg-white rounded-lg shadow">
-                        <!-- Modal header -->
-                        <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
-                            <h3 class="text-xl font-semibold text-gray-900 ">
-                                Daftarkan Perusahaan Anda Sekarang
-                            </h3>
-                            <button type="button"
-                                class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
-                                data-modal-hide="paket-pma-modal">
-                                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-                                    fill="none" viewBox="0 0 14 14">
-                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-                                </svg>
-                                <span class="sr-only">Close modal</span>
-                            </button>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="p-4 md:p-5">
-                            <form class="space-y-4" action="#">
-                                <div>
-                                    <label for="Paket"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" id="nama_paket" readonly
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
-                                </div>
-                                <div>
-                                    <label for="nama"
-                                        class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
-                                    <input type="text" name="nama" id="nama_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
-                                        Telepon</label>
-                                    <input type="text" name="nomor_telepon_pt" id="nomor_telepon_pt"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="No. Telepon Anda" required />
-                                </div>
-                                <div>
-                                    <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
-                                        Perusahaan</label>
-                                    <input type="text" name="nama_perusahaan" id="nama_perusahaan"
-                                        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
-                                        placeholder="Nama Perusahaan Anda" required />
-                                </div>
-                                <button type="submit"
-                                    class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
-                                    Dapatkan Penawaran
-                                </button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
             {{-- pricing paket pendirian cv --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
                 <x-price-card title="Business Starter" :original-price="10000000" :discount-price="9000000" :features="$firma"
-                    :included-features-count="count($firma) - 7" button-text="Pilih Paket" modal-target="paket-firma-modal" />
+                    :included-features-count="count($firma) - 7" button-text="Pilih Paket" modal-target="modal-paket" data-nama-paket="Paket Pendirian Firma" />
                 <x-price-card title="Business Standard" :original-price="12500000" :discount-price="10000000" :features="$firma"
-                    :included-features-count="count($firma) - 5" button-text="Pilih Paket" modal-target="paket-firma-modal" />
+                    :included-features-count="count($firma) - 5" button-text="Pilih Paket" modal-target="modal-paket" data-nama-paket="Paket Pendirian Firma" />
                 <x-price-card title="Business Complete" :original-price="13500000" :discount-price="12000000" :features="$firma"
-                    :included-features-count="count($firma)" button-text="Pilih Paket" modal-target="paket-firma-modal" />
+                    :included-features-count="count($firma)" button-text="Pilih Paket" modal-target="modal-paket" data-nama-paket="Paket Pendirian Firma" />
             </div>
         </div>
     </section>
+
+    {{-- MODAL --}}
+    <div id="modal-paket" tabindex="-1" aria-hidden="true"
+        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full"
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <!-- Modal content -->
+            <div class="relative bg-white rounded-lg shadow">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t ">
+                    <h3 class="text-xl font-semibold text-gray-900 ">
+                        Hubungi kami dan dapatkan penawaran terbaik kami
+                    </h3>
+                    <button type="button"
+                        class="end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center "
+                        data-modal-hide="modal-paket">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                            viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
+                </div>
+                <!-- Modal body -->
+                <div class="p-4 md:p-5">
+                    <form class="space-y-4" action="{{ route('form-pendirian-badan-usaha') }}" method="POST">
+                        @csrf
+                        <div>
+                            <label for="Paket" class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
+                            <input type="text" name="paket" readonly
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
+                            @error('paket')
+                                <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div>
+                            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama</label>
+                            <input type="text" name="nama" id="nama_pt"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                                placeholder="Nama Anda" required />
+                            @error('nama')
+                                <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div>
+                            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nomor
+                                Telepon</label>
+                            <input type="tel" name="nomor_telepon_pt" id="nomor_telepon_pt"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                                placeholder="No. Telepon Anda" required />
+                            @error('nomor_telepon_pt')
+                                <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <div>
+                            <label for="nama" class="block mb-2 text-sm font-medium text-gray-900 ">Nama
+                                <span x-ref="pek" id="nama-dinamis">Perusahaan</span>
+                            </label>
+                            <input type="text" name="nama_perusahaan" id="nama_perusahaan"
+                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+                                placeholder="Contoh: PT. Atna Consulting/ CV. Atna Consulting/ Yayasan Atna Consulting"
+                                required />
+                            @error('nama_perusahaan')
+                                <span class="text-red-500">{{ $message }}</span>
+                            @enderror
+                        </div>
+                        <button type="submit"
+                            class="w-full text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center ">
+                            Dapatkan Penawaran
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
     {{-- @push('scripts')
         @vite('resources/js/badan-usaha-modal.js')

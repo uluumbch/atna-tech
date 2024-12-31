@@ -33,7 +33,7 @@ Route::get('/s', function () {
     //      url: route('home')
     //     );
     dd(
-        Mail::to('nack.gaull@gmail.com')
+        Mail::to(env('MAIL_RECEIVER'))
             ->send(
                 new \App\Mail\ContactMail(
                     userName: 'Bachrul Uluum',
@@ -49,3 +49,5 @@ Route::get('/s', function () {
 });
 
 Route::post('/contact', \App\Http\Controllers\ContactFormController::class)->name('contact');
+Route::post('/submit-pendirian-badan-usaha', \App\Http\Controllers\PendirianBadanUsahaFormController::class)->name('form-pendirian-badan-usaha');
+

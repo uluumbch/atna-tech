@@ -28,7 +28,7 @@ class ContactFormController extends Controller
         ]);
 
         try {
-            Mail::to('nack.gaull@gmail.com')
+            Mail::to(env('MAIL_RECEIVER'))
                 ->send(
                     new \App\Mail\ContactMail(
                         userName: $request->input('name'),

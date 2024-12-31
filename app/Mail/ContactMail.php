@@ -48,7 +48,7 @@ class ContactMail extends Mailable
         return new Envelope(
             subject: $this->isiSubjek,
             replyTo: [
-                new Address($this->userEmail, 'User'),
+                new Address($this->userEmail, $this->userName),
             ],
         );
     }

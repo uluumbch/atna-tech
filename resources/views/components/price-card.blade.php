@@ -40,10 +40,39 @@
         @endforeach
     </ul>
 
-    <button type="button" 
-    data-modal-target="{{ $modalTarget }}" data-modal-toggle="{{ $modalTarget }}"
-    @click="document.getElementById('{{ $modalTarget }}').querySelector('input[name=paket]').value = '{{ $title }}'"
+    <button type="button" data-modal-target="{{ $modalTarget }}" data-modal-toggle="{{ $modalTarget }}"
+        @click="handleClickPaket"
         class="text-white {{ $buttonClass }} focus:ring-4 focus:outline-none focus:ring-blue-200 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center ">
         {{ $buttonText }}
     </button>
 </div>
+
+@pushOnce('scripts')
+    <script>
+        function handleClickPaket(e) {
+            console.log(document.getElementById('{{ $modalTarget }}').querySelector('input[name=paket]').value);
+            
+            document.getElementById('{{ $modalTarget }}').querySelector('input[name=paket]').value = e.target.parentElement.querySelector('h5').innerText;
+            
+            const custom = e.target.parentElement.getAttribute('data-custom');
+            const nama_paket = e.target.parentElement.getAttribute('data-nama-paket');
+            const form = document.getElementById('{{ $modalTarget }}').querySelector('form');
+            if(custom) {
+                document.getElementById('nama-dinamis').innerText = custom;
+            }
+
+            if (nama_paket) {
+                let input = form.querySelector('input[name=nama_paket]');
+
+                if (!input) {
+                    input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'nama_paket';
+                    form.appendChild(input);
+                }
+
+                input.value = nama_paket;   
+            }
+        }
+    </script>
+@endPushOnce
