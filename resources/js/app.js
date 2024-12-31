@@ -13,4 +13,16 @@ Alpine.plugin(anchor)
 
 Alpine.start()
 // If you want Alpine's instance to be available globally
-window.Alpine = Alpine
+window.Alpine = Alpine;
+
+window.toast = function(message, options = {}) {
+    window.dispatchEvent(new CustomEvent('toast-show', { 
+        detail: { 
+            message,
+            type: options.type || 'default',
+            description: options.description || '',
+            position: options.position || 'top-right',
+            html: options.html || ''
+        }
+    }));
+}

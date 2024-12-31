@@ -9,7 +9,11 @@ use Illuminate\View\Component;
 class PriceCard extends Component
 {
     public $includedFeatures;
+
     public $excludedFeatures;
+
+    public $attributes = [];
+
     /**
      * Create a new component instance.
      */
@@ -22,8 +26,7 @@ class PriceCard extends Component
         public string $buttonText = 'Pilih Paket',
         public string $modalTarget = '',
         public string $buttonClass = 'bg-primary-700 hover:bg-primary-800'
-    )
-    {
+    ) {
         $this->includedFeatures = array_slice($features, 0, $includedFeaturesCount);
         $this->excludedFeatures = array_slice($features, $includedFeaturesCount);
     }

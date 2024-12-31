@@ -116,7 +116,47 @@
     <x-fab />
     {{-- end FAB --}}
 
+
     @stack('scripts')
+
+    {{-- toast --}}
+    <x-toast />
+
+    @session('success')
+        <script>
+            $(document).ready(function() {
+                toast('Success!', {
+                    type: 'success',
+                    description: {!! json_encode(session('success')) !!},
+                    position: 'top-right'
+                });
+            });
+        </script>
+    @endsession
+
+    @session('error')
+        <script>
+            $(document).ready(function() {
+                toast('Error!', {
+                    type: 'danger',
+                    description: {!! json_encode(session('error')) !!},
+                    position: 'top-right'
+                });
+            });
+        </script>
+    @endsession
+
+    @session('info')
+        <script>
+            $(document).ready(function() {
+                toast('Info!', {
+                    type: 'info',
+                    description: {!! json_encode(session('info')) !!},
+                    position: 'top-right'
+                });
+            });
+        </script>
+    @endsession
 
 </body>
 

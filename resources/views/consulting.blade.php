@@ -177,22 +177,27 @@
                     [
                         'name' => 'Pendirian CV',
                         'price' => 'Rp 3.900.000',
+                        'id' => 'cv',
                     ],
                     [
                         'name' => 'Pendirian Firma',
                         'price' => 'Rp 9.000.000',
+                        'id' => 'firma',
                     ],
                     [
                         'name' => 'Pendirian Koperasi',
                         'price' => 'Rp 8.000.000',
+                        'id' => 'koperasi',
                     ],
                     [
                         'name' => 'Pendirian Yayasan',
                         'price' => 'Rp 5.000.000',
+                        'id' => 'yayasan',
                     ],
                     [
                         'name' => 'Pendirian Perkumpulan',
                         'price' => 'Rp 8.000.000',
+                        'id' => 'perkumpulan',
                     ],
                 ];
             @endphp
@@ -363,25 +368,20 @@
         <h1 class="font-extrabold text-4xl text-center my-10">
             Cek Ketersediaan Nama Perusahaan Anda
         </h1>
-        <div class="h-20 bg-primary-100 text-center">DEVELOPMENT</div>
+        <a href="https://ahu.go.id/sabh/perseroan/pesannama" target="_blank"
+            class="inline-flex items-center bg-primary-500 text-slate-100 px-4 py-2 rounded-lg m-5">
+            Cek Nama Perusahaan Anda
+        </a>
     </section>
 
     <section class="container mx-auto px-4 py-8 ">
         <h1 class="font-extrabold text-4xl text-center my-10">
             Cek Kode KBLI Yang Anda Butuhkan Disini
         </h1>
-
-        <form class="max-w-3xl w-full mx-auto">
-            <div class="flex items-center gap-3">
-                <input type="text"
-                    class="w-full p-2.5 text-sm bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:focus:ring-blue-500 dark:focus:border-blue-500"
-                    placeholder="Cari KBLI" />
-                <button
-                    class="bg-primary-500 text-white px-4 py-2 rounded-lg hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-blue-300">
-                    Cari
-                </button>
-            </div>
-        </form>
+        <a href="https://oss.go.id/informasi/kbli-berbasis-risiko" target="_blank"
+        class="inline-flex items-center bg-primary-500 text-slate-100 px-4 py-2 rounded-lg m-5">
+        Cek Kode KBLI
+    </a>
     </section>
 
     <section class="container mx-auto px-4 py-8">

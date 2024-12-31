@@ -123,7 +123,7 @@
                                 <div>
                                     <label for="Paket"
                                         class="block mb-2 text-sm font-medium text-gray-900 ">Paket</label>
-                                    <input type="text" name="paket" id="nama_paket" readonly
+                                    <input type="text" name="paket" readonly
                                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "required />
                                 </div>
                                 <div>
@@ -514,21 +514,24 @@
             {{-- pricing paket pendirian PT --}}
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3  mx-auto w-max my-5">
 
-                <x-price-card title="Paket Pendirian Yayasan" :original-price="5000000" :discount-price="5000000" :features="$yayasan"
-                    :included-features-count="count($yayasan)" button-text="Pilih Paket" modal-target="paket-perorangan-modal" />
+                <x-price-card id="yayasan" title="Paket Pendirian Yayasan" :original-price="5000000" :discount-price="5000000"
+                    :features="$yayasan" :included-features-count="count($yayasan)" button-text="Pilih Paket"
+                    modal-target="paket-perorangan-modal" />
 
-                <x-price-card title="Paket Pendirian Koperasi" :original-price="8000000" :discount-price="8000000" :features="$koperasi"
-                    :included-features-count="count($koperasi)" button-text="Pilih Paket" modal-target="paket-perorangan-modal" />
+                <x-price-card id="koperasi" title="Paket Pendirian Koperasi" :original-price="8000000" :discount-price="8000000"
+                    :features="$koperasi" :included-features-count="count($koperasi)" button-text="Pilih Paket"
+                    modal-target="paket-perorangan-modal" />
 
-                <x-price-card title="Paket Pendirian Perkumpulan" :original-price="8000000" :discount-price="8000000" :features="$perkumpulan"
-                    :included-features-count="count($perkumpulan)" button-text="Pilih Paket" modal-target="paket-perorangan-modal" />
+                <x-price-card id="perkumpulan" title="Paket Pendirian Perkumpulan" :original-price="8000000" :discount-price="8000000"
+                    :features="$perkumpulan" :included-features-count="count($perkumpulan)" button-text="Pilih Paket"
+                    modal-target="paket-perorangan-modal" />
             </div>
 
         </div>
     </section>
 
     <section class="bg-gray-100">
-        <div class="container mx-auto px-4 py-16">
+        <div class="container mx-auto px-4 py-16" id="cv">
             @php
                 $cv = [
                     'FREE Konsultasi',
@@ -629,7 +632,7 @@
         </div>
     </section>
     <section class="bg-gray-50">
-        <div class="container mx-auto px-4 py-16">
+        <div class="container mx-auto px-4 py-16" id="firma">
             @php
                 $firma = [
                     'FREE Konsultasi',
@@ -733,5 +736,8 @@
         </div>
     </section>
 
+    {{-- @push('scripts')
+        @vite('resources/js/badan-usaha-modal.js')
+    @endpush --}}
 
 @endsection
