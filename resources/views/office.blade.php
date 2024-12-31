@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title', 'Atna Consulting')
+@section('title', 'Atna Office')
 @section('content')
     <section class="min-h-screen mb-10 flex items-center relative pt-20 bg-cover bg-center bg-no-repeat"
         style="background-image: url('{{ asset('images/pexels-lkloeppel-466685.jpg') }}')">

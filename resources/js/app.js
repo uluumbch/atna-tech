@@ -1,4 +1,5 @@
 import './bootstrap';
+import 'flowbite';
 import Alpine from 'alpinejs'
 import anchor from '@alpinejs/anchor'
 import scrollTo from 'alpinejs-scroll-to'

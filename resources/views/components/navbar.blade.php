@@ -1,5 +1,5 @@
 <nav x-data="{ mobileMenuIsOpen: false }" @click.away="mobileMenuIsOpen = false" x-scroll-to-header
-    class="flex items-center justify-between bg-primary-200 fixed z-[999] w-full top-0 px-6 py-4 "
+    class="flex items-center justify-between bg-primary-200 fixed z-[39] w-full top-0 px-6 py-4 "
     aria-label="atna tech menu">
     <!-- Brand Logo -->
     <a href="{{ route('home') }}" class="">

@@ -160,16 +160,19 @@
                         'name' => 'Pendirian PT Perorangan',
                         'price' => 'Rp 2.000.000',
                         'promo' => '*Paket Promo',
+                        'id' => 'pt-perorangan',
                     ],
                     [
                         'name' => 'Pendirian PT',
                         'price' => 'Rp 6.500.000',
                         'promo' => '*Paket Promo',
+                        'id' => 'pt',
                     ],
                     [
                         'name' => 'Pendirian PMA',
                         'price' => 'Rp 12.500.000',
                         'promo' => '*Paket Promo',
+                        'id' => 'pma',
                     ],
                     [
                         'name' => 'Pendirian CV',
@@ -211,7 +214,7 @@
                                 @endif
                             </p>
                         </li> --}}
-                        <a href="#"
+                        <a href="{{ route('pendirian-badan-usaha') }}#{{ @$item['id'] }}"
                             class="relative inline-flex items-center w-full px-4 py-2 text-sm font-medium border-b border-gray-600 rounded-t-lg hover:bg-gray-200 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 group">
 
                             <svg class="w-8 h-8 group-hover:text-blue-700" viewBox="0 0 24 24" fill="currentColor"
